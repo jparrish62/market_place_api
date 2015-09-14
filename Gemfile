@@ -20,6 +20,7 @@ gem 'active_model_serializers', '~> 0.9.3'
 gem "devise"
 
 gem 'responders', '~> 2.1.0'
+gem 'pry', '~> 0.10.1'
 
 group :doc do 
 	gem 'sdoc', require: false
