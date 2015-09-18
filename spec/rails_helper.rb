@@ -38,8 +38,14 @@ RSpec.configure do |config|
 
   config.before(:each, type: :controller) do
     include_default_accept_headers
-  end
 
+  
+  end
+  config.include Request::JsonHelpers, :type => :controller
+
+  config.include Request::HeadersHelpers, :type => :controller
+  
+  config.include Devise::TestHelpers, :type => :controller
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
